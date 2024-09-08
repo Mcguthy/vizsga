@@ -4,10 +4,6 @@ require("system/session.php");
 $sql_read=$conn->prepare("SELECT * FROM car_articles ORDER BY Id DESC");
 $sql_read->execute();
 $data_from_sql=$sql_read->get_result();
-// Here, if the user is logged in, we echo the username onto the top of the page.
-if(isset($_SESSION['login_user'])){
-    echo $login_session_username;
-}
 ?>
 
 <!DOCTYPE HTML>
@@ -35,6 +31,9 @@ if(isset($_SESSION['login_user'])){
                            echo "<div class=\"article\">";    
                                 echo "<img src=\"".$result["picture"]."\" class=\"car-picture\"/>";
                                 echo "<a href=\"viewArticle.php?id=".$result["id"]."\" class=\"car_name\">".$result["car_name"]."</a>";
+                                echo "<p class=\"price\">".$result["price"]."</p>";
+                                echo "<p class=\"location\">".$result["location"]."</p>";
+                                echo "<p class=\"phonenumber\">".$result["phone_number"]."</p>";
                                 echo "<p class=\"car-description\">".$result["description"]."</p>";
                             echo "</div>";
                         }

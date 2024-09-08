@@ -1,0 +1,71 @@
+@font-face {
+    font-family: RobotoRegular;
+    src: url("Roboto-Regular.ttf") format("truetype");
+}
+
+body{
+    margin: auto;
+    max-width: 1000px;
+    margin-top: 0;
+}
+
+.header {
+    font-family: RobotoRegular;
+    display: flexbox;
+    text-align: center;
+}
+
+.header a {
+    color:black;
+    transition: all 0.2s ease-in-out;
+    margin-left: 120px;
+    margin-right: 120px;
+    text-decoration: none;
+}
+
+.header a:visited {
+    color:black;
+}
+
+.header a:hover {
+    color:red;
+}
+
+.Fejleckep {
+    width: 100%;
+    height: 250px;
+}
+
+.main-container .Car-container {
+    display: flexbox;
+    font-family: RobotoRegular;
+}
+
+.main-container .Car-container .car_name {
+    text-align: left;
+    transition: all 0.2s ease-in-out;
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.main-container .Car-container .car_name:visited {
+    color:black;
+}
+
+.main-container .Car-container .car_name:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.main-container .Car-container .car-picture {
+    width:200px;
+    height: auto;
+}
+
+.main-container .Car-container p {
+    text-align: justify;
+    font-size: 12px;
+}
+
+

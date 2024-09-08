@@ -1,7 +1,7 @@
 <div class="header">
     <?php
     if(isset($_SESSION['login_user'])){
-        echo $login_session_username;
+        echo "<a class=\"username\">$login_session_username</a>";
         echo "<a href=newCarticle.php>Új Hírdetés</a>";
         echo "<a href=logout.php>Kijelentkezés</a>";
     } else {
@@ -9,5 +9,5 @@
     }
     
     ?>
-    <img src="fejlec.jpg"/>
+    <img class="Fejleckep" src="fejlec.jpg"/>
 </div>
