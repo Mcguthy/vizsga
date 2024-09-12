@@ -23,18 +23,23 @@ $data_from_sql=$sql_read->get_result();
         require("components/header.php");
         ?>
             <div class="main-container">
-                    <div class="Car-container">
+                    <div class="Article-container">
+                        
                         <?php
                         // Here we present every article from our database with the help of a while-cycle. 
                         while($result=$data_from_sql->fetch_assoc()){
                             // The fetch_assoc function grabs and puts every article into the $results variable in the order in which they were created.
-                           echo "<div class=\"article\">";    
-                                echo "<img src=\"".$result["picture"]."\" class=\"car-picture\"/>";
-                                echo "<a href=\"viewArticle.php?id=".$result["id"]."\" class=\"car_name\">".$result["car_name"]."</a>";
-                                echo "<p class=\"price\">".$result["price"]."</p>";
-                                echo "<p class=\"location\">".$result["location"]."</p>";
-                                echo "<p class=\"phonenumber\">".$result["phone_number"]."</p>";
-                                echo "<p class=\"car-description\">".$result["description"]."</p>";
+                            echo "<div class=\"Car-container\">";
+                                echo "<div class=\"picture-box\">";
+                                    echo "<img src=\"".$result["picture"]."\" class=\"car-picture\"/>";
+                                echo "</div>";
+                                echo "<div class=\"article\">";    
+                                    echo "<a href=\"viewArticle.php?id=".$result["id"]."\" class=\"car_name\">".$result["car_name"]."</a>";
+                                    echo "<p class=\"price\">".$result["price"]."</p>";
+                                    echo "<p class=\"location\">".$result["location"]."</p>";
+                                    echo "<p class=\"phonenumber\">".$result["phone_number"]."</p>";
+                                    echo "<p class=\"car-description\">".$result["description"]."</p>";
+                                echo "</div>";
                             echo "</div>";
                         }
                         ?>    

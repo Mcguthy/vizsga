@@ -5,7 +5,7 @@ require("system/check_login.php");
 
 //Here we grab the data after "id=" from the link
 $getlinkid=htmlspecialchars($_GET["id"]);
-$article_query=$conn->prepare("SELECT car_name, price, location, phone_number, description, picture FROM car_articles WHERE id=?");
+$article_query=$conn->prepare("SELECT id, car_name, price, location, phone_number, description, picture FROM car_articles WHERE id=?");
 $article_query->bind_param("i", $getlinkid);
 $article_query->execute();
 $article_result=$article_query->get_result();
@@ -34,7 +34,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST") {
         //if one of the file types is true and it's below 2200kb, we are uploading the file
         if ($is_image && $is_small) {
             //if yes, we are renaming the file to, example: stream1.jpg
-            $newfilename = 'car'.$row_id["id"].'.' . end(explode('.',$_FILES["fileToUploadThumb"]["name"]));
+            $newfilename = 'car'.$row_id.'.' . end(explode('.',$_FILES["fileToUploadThumb"]["name"]));
             $sqlfilename = $target_dir . $newfilename;
             $sqlfilename = strtolower($sqlfilename);
             move_uploaded_file($_FILES["fileToUploadThumb"]["tmp_name"], $sqlfilename);
@@ -47,6 +47,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST") {
     $form_phonenumber=$_POST['phone_number'];
     $form_description=$_POST['description'];
     $form_picture=$sqlfilename;
+    echo $form_picture;
     $sql_read=$conn->prepare("UPDATE car_articles SET car_name=?, price=?, location=?, phone_number=?, description=?, picture=? WHERE id=?");
     $sql_read->bind_param("ssssssi", $form_carname, $form_price, $form_location, $form_phonenumber, $form_description, $form_picture, $getlinkid);
     // Here we ran our SQL code if it was successful we redirect the user to the front page, if not we echo the error message
