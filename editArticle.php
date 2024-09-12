@@ -34,7 +34,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST") {
         //if one of the file types is true and it's below 2200kb, we are uploading the file
         if ($is_image && $is_small) {
             //if yes, we are renaming the file to, example: stream1.jpg
-            $newfilename = 'article'.$row_id["id"].'.' . end(explode('.',$_FILES["fileToUploadThumb"]["name"]));
+            $newfilename = 'car'.$row_id["id"].'.' . end(explode('.',$_FILES["fileToUploadThumb"]["name"]));
             $sqlfilename = $target_dir . $newfilename;
             $sqlfilename = strtolower($sqlfilename);
             move_uploaded_file($_FILES["fileToUploadThumb"]["tmp_name"], $sqlfilename);
@@ -73,9 +73,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST") {
         ?>
         <form autocomplete="off" method="post" enctype="multipart/form-data"> 
             <input name="car_name" placeholder="Autó Neve" value="<?php echo $article_data["car_name"]; ?>"/>
-            <input name="price"><?php echo $article_data["price"]; ?></input>
-            <input name="location"><?php echo $article_data["location"]; ?></input>
-            <input name="phone_number"><?php echo $article_data["phone_number"]; ?></input>
+            <input name="price" placeholder="Autó Ára"> <?php echo $article_data["price"]; ?></input>
+            <input name="location" placeholder="Autó Helye"> <?php echo $article_data["location"]; ?></input>
+            <input name="phone_number" placeholder="Telefonszám"><?php echo $article_data["phone_number"]; ?></input>
             <textarea name="description"><?php echo $article_data["description"]; ?></textarea>
             <input type="file" accept=".png, .jpg, .gif" name="fileToUploadThumb">
             <img style="width: 200px; height: auto;" src="<?php echo $article_data["picture"]; ?>">
