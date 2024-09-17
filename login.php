@@ -36,6 +36,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     <head>
         <title>Bejelentkezés</title>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="loginstyle.css">
     </head>
     <body>
     <div class="loginheader">
@@ -43,10 +44,13 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         <p>Üdv a Forza Turismo Használtautók oldalán!<p>
     </div>
     <p><?php echo $error; ?></p>
-    <form autocomplete="off" method="post" enctype="multipart/form-data"> 
-            <input name="username" placeholder="Felhasználónév">
-            <input name="password" type="password" placeholder="Jelszó">
-            <button type="submit">Bejelentkezés</button>
-    </form>
+        <div class="Loginbox">
+            <form autocomplete="off" method="post" enctype="multipart/form-data"> 
+                <input name="username" placeholder="Felhasználónév">
+                <input name="password" type="password" placeholder="Jelszó">
+                <button type="submit">Bejelentkezés</button>
+            </form>
+        </div>
+        <a href=registration.php class="regisztraljkerlek"> Még nincs Forza Turismo Fiókod? Akkor regisztrálj most!</a> 
     </body>
 </html>

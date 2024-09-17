@@ -40,6 +40,7 @@ body{
     display: flex;
     font-family: RobotoRegular;
     width: 100%;
+    align-items: center;
 }
 
 .main-container .Article-container .Car-container .picture-box {
@@ -81,5 +82,24 @@ body{
     height: auto;
 }
 
+.footer {
+    font-family: RobotoRegular;
+    display: flexbox;
+    font-size: 12px;
+    border-top: groove;
+    margin-top: 5px;
+    padding-top: -0,5px;
+}
 
+.footer a {
+    color: red;
+    text-decoration: none;
+}
 
+.footer a:visited {
+    color: red;
+}
+
+.footer a:hover {
+    color: black;
+}
