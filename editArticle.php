@@ -65,7 +65,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST") {
         <title>Cikk Szerkesztése</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <link rel="stylesheet" href="editarticle.css">
     </head>
 
     <body>
@@ -73,11 +73,11 @@ if($_SERVER["REQUEST_METHOD"]=="POST") {
         require("components/header.php");
         ?>
         <form autocomplete="off" method="post" enctype="multipart/form-data"> 
-            <input name="car_name" placeholder="Autó Neve" value="<?php echo $article_data["car_name"]; ?>"/>
-            <input name="price" placeholder="Autó Ára"> <?php echo $article_data["price"]; ?></input>
-            <input name="location" placeholder="Autó Helye"> <?php echo $article_data["location"]; ?></input>
-            <input name="phone_number" placeholder="Telefonszám"><?php echo $article_data["phone_number"]; ?></input>
-            <textarea name="description"><?php echo $article_data["description"]; ?></textarea>
+            <input class="carname" name="car_name" placeholder="Autó Neve" value="<?php echo $article_data["car_name"]; ?>"/>
+            <input class="price" name="price" placeholder="Autó Ára"> <?php echo $article_data["price"]; ?></input>
+            <input class="location" name="location" placeholder="Autó Helye"> <?php echo $article_data["location"]; ?></input>
+            <input class="phonenumber" name="phone_number" placeholder="Telefonszám"><?php echo $article_data["phone_number"]; ?></input>
+            <textarea class="description" name="description"><?php echo $article_data["description"]; ?></textarea>
             <input type="file" accept=".png, .jpg, .gif" name="fileToUploadThumb">
             <img style="width: 200px; height: auto;" src="<?php echo $article_data["picture"]; ?>">
             <button type="submit">Cikk Frissitése</button>

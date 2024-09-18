@@ -46,9 +46,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         <p><?php echo $error; ?></p>
             <div class="Loginbox">        
                 <form autocomplete="off" method="post" enctype="multipart/form-data"> 
-                        <input name="username" placeholder="Felhasználónév">
-                        <input name="password" type="password" placeholder="Jelszó">
-                        <button type="submit">Regisztrálok!</button>
+                        <input class="felnév" name="username" placeholder="Felhasználónév">
+                        <input class="jelszo" name="password" type="password" placeholder="Jelszó">
+                        <button class="button" type="submit">Regisztrálok!</button>
             </div>
                 </form>
         <p class="itwillbefree">A regisztráció ingyenes, és mindig az is marad.</p>

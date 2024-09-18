@@ -46,3 +46,21 @@ body {
     display:flex;
     justify-content: center;
 }
+
+.felnév {
+    display:block;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.jelszo {
+    display:block;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

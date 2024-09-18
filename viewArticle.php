@@ -27,9 +27,11 @@ $article_data=$data_from_sql->fetch_assoc();
         <div class="split-container">
             <div class="main-container">
                     <div class="article-container">
-                        <?php 
-                           echo "<div class=\"article\">";    
+                        <?php     
+                           echo "<div class=\"picture-box\">";       
                                 echo "<img src=\"".$article_data["picture"]."\" class=\"article-picture\"/>";
+                           echo "</div>" ;     
+                           echo "<div class=\"article\">";
                                 echo "<h2 class=\"car-name\">".$article_data["car_name"]."</h2>";
                                 echo "<p class=\"price\">".$article_data["price"]."</p>";
                                 echo "<p class=\"location\">".$article_data["location"]."</p>";
@@ -40,7 +42,7 @@ $article_data=$data_from_sql->fetch_assoc();
                     </div>
                     <?php
                      if(isset($_SESSION['login_user'])) { 
-                        echo "<a href=\"editArticle.php?id=".$article_data["id"]."\">Cikk Szerkesztése</a>";
+                        echo "<a class=\"edit\" href=\"editArticle.php?id=".$article_data["id"]."\">Cikk Szerkesztése</a>";
                      }
                     ?>
             </div>

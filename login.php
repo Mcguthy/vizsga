@@ -46,9 +46,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     <p><?php echo $error; ?></p>
         <div class="Loginbox">
             <form autocomplete="off" method="post" enctype="multipart/form-data"> 
-                <input name="username" placeholder="Felhasználónév">
-                <input name="password" type="password" placeholder="Jelszó">
-                <button type="submit">Bejelentkezés</button>
+                <input class="felnév" name="username" placeholder="Felhasználónév">
+                <input class="jelszo" name="password" type="password" placeholder="Jelszó">
+                <button class="button" type="submit">Bejelentkezés</button>
             </form>
         </div>
         <a href=registration.php class="regisztraljkerlek"> Még nincs Forza Turismo Fiókod? Akkor regisztrálj most!</a> 

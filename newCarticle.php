@@ -60,6 +60,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST") {
         <title>Új Autó Hírdetése</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="editarticle.css">
 
     </head>
 
@@ -68,11 +69,11 @@ if($_SERVER["REQUEST_METHOD"]=="POST") {
         require("components/header.php");
         ?>
         <form autocomplete="off" method="post" enctype="multipart/form-data"> 
-            <input name="car_name" placeholder="Autó Neve"/>
-            <input name="price" placeholder="Ár"></textarea>
-            <input name="location" placeholder="Autó helye"></textarea>
-            <input name="phone number" placeholder="Telefonszám"></textarea>
-            <textarea name="description"></textarea>
+            <input class="carname" name="car_name" placeholder="Autó Neve"/>
+            <input class="price" name="price" placeholder="Ár"></textarea>
+            <input class="location" name="location" placeholder="Autó helye"></textarea>
+            <input class="phonenumber"  name="phone number" placeholder="Telefonszám"></textarea>
+            <textarea class="description" name="description"></textarea>
             <input type="file" accept=".png, .jpg, .gif" name="fileToUploadThumb">
             <button type="submit">Gyerönk!</button>
             
