@@ -75,7 +75,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST") {
             <input class="phonenumber"  name="phone number" placeholder="Telefonszám"></textarea>
             <textarea class="description" name="description"></textarea>
             <input type="file" accept=".png, .jpg, .gif" name="fileToUploadThumb">
-            <button type="submit">Gyerönk!</button>
+            <button type="submit">Autó Meghírdetése</button>
             
         </form>
           

@@ -72,15 +72,20 @@ if($_SERVER["REQUEST_METHOD"]=="POST") {
         <?php
         require("components/header.php");
         ?>
-        <form autocomplete="off" method="post" enctype="multipart/form-data"> 
+        <form class="formclass" autocomplete="off" method="post" enctype="multipart/form-data"> 
+            <div class="picturebox">
+            <img class="kep" style="width: 200px; height: auto;" src="<?php echo $article_data["picture"]; ?>">
+            </div>
+            <div class="editbox">       
             <input class="carname" name="car_name" placeholder="Autó Neve" value="<?php echo $article_data["car_name"]; ?>"/>
-            <input class="price" name="price" placeholder="Autó Ára"> <?php echo $article_data["price"]; ?></input>
-            <input class="location" name="location" placeholder="Autó Helye"> <?php echo $article_data["location"]; ?></input>
-            <input class="phonenumber" name="phone_number" placeholder="Telefonszám"><?php echo $article_data["phone_number"]; ?></input>
+            <input class="price" name="price" placeholder="Autó Ára" value="<?php echo $article_data["price"]; ?>"/>
+            <input class="location" name="location" placeholder="Autó Helye" value="<?php echo $article_data["location"]; ?>"/>
+            <input class="phonenumber" name="phone_number" placeholder="Telefonszám" value="<?php echo $article_data["phone_number"]; ?>"/>
             <textarea class="description" name="description"><?php echo $article_data["description"]; ?></textarea>
             <input type="file" accept=".png, .jpg, .gif" name="fileToUploadThumb">
-            <img style="width: 200px; height: auto;" src="<?php echo $article_data["picture"]; ?>">
-            <button type="submit">Cikk Frissitése</button>
+            
+            <button class="buttonclass" type="submit">Cikk Frissitése</button>
+            </div>
             
         </form>
           

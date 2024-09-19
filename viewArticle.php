@@ -34,15 +34,15 @@ $article_data=$data_from_sql->fetch_assoc();
                            echo "<div class=\"article\">";
                                 echo "<h2 class=\"car-name\">".$article_data["car_name"]."</h2>";
                                 echo "<p class=\"price\">".$article_data["price"]."</p>";
-                                echo "<p class=\"location\">".$article_data["location"]."</p>";
-                                echo "<p class=\"phone_number\">".$article_data["phone_number"]."</p>";
+                                echo "<a class=\"location\">".$article_data["location"]."/</a>";
+                                echo "<a class=\"phone_number\">".$article_data["phone_number"]."</a>";
                                 echo "<p class=\"description\">".$article_data["description"]."</p>";
                             echo "</div>";
                         ?>    
                     </div>
                     <?php
                      if(isset($_SESSION['login_user'])) { 
-                        echo "<a class=\"edit\" href=\"editArticle.php?id=".$article_data["id"]."\">Cikk Szerkesztése</a>";
+                        echo "<a class=\"edit\" href=\"editArticle.php?id=".$article_data["id"]."\">Szerkesztés</a>";
                      }
                     ?>
             </div>

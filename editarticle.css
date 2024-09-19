@@ -32,9 +32,27 @@ body{
     color:red;
 }
 
+.header .username {
+    color:red;
+}
+
 .Fejleckep {
     width: 100%;
     height: 250px;
+}
+
+.formclass {
+    display:flex;
+    width: 100%;
+}
+
+.picturebox {
+    justify-content: left;
+    width: 25%;
+}
+
+.editbox {
+    width: 75%;
 }
 
 .carname {
@@ -63,6 +81,56 @@ body{
 
 .description {
     margin-top: 5px;
-    margin-bottom: 5px; 
+    margin-bottom: 10px; 
     display:block;
+}
+
+.buttonclass {
+    margin-top: 10px;
+    display: block;
+}
+
+@media (max-width: 390px) {
+    body {
+        max-width: 390px;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 390px) {
+    .header {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 390px) {
+    .header a{
+        display: block;
+    }
+}
+
+@media (max-width: 390px) {
+    .Fejleckep {
+        max-height: 150px;
+    }
+}
+
+@media (max-width: 390px) {
+    .formclass {
+        display: block;
+    }
+}
+
+@media (max-width: 390px) {
+    .picturebox {
+        width: 100px;
+    }
+}
+
+@media (max-width: 390px) {
+    .editbox {
+        width: 100%;
+        display:flexbox;
+    }
 }
